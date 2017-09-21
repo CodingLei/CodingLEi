@@ -1,0 +1,51 @@
+﻿@using CodingLei.Admin.Models
+@using CodingLei_Model.SearchModel;
+@model DemoSearchModel
+@{
+    ViewBag.Title = "InterfaceTypeIndex";
+}
+@using (Ajax.BeginForm("GetInterfaceTypeList", new AjaxOptions { UpdateTargetId = "rsResult", OnBegin = "", OnComplete = "" }))
+{
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    关键字：
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.BrandName, new { @style = "width:100px;" })
+                </td>
+
+
+                @Html.HiddenFor(m => m.PageIndex)
+                <td>
+                    @Html.SubmitButton("查询", new {id = "btnSearch", style = "margin:0px 0px 0px 20px;"})
+                </td>
+
+                <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style = "margin:0px 0px 0px 20px;">添加接口</button>
+                    @*<button type="button" class="btn btn-primary"  onclick="UpdateBrand(0)" data-toggle="modal" data-target="#myModal" >编辑接口</button>*@
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    <div id="rsResult" style="margin:20px 0px 0px 0px;">
+        @Html.Partial("InterfaceTypeResultView")
+    </div>
+}
+@Html.Partial("InterfaceTypeAdd")
+
+
+
+<script>
+    $(function() {
+        $('[data-toggle="popover"]').popover();
+    });
+
+    function UpdateBrand() {
+        $("#myModalLabel").text("编辑");
+    }
+</script>
+
