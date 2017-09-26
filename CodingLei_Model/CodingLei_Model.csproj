@@ -59,6 +59,7 @@
     <Compile Include="TableModel\InterfacesTypes.cs" />
     <Compile Include="TableModel\PositionTypes.cs" />
     <Compile Include="TableModel\ProblemsType.cs" />
+    <Compile Include="TableModel\UserInfoModel.cs" />
     <Compile Include="TableModel\Users.cs" />
     <Compile Include="TableModel\WeChatUsers.cs" />
     <Compile Include="TableModel\WorkSoultion.cs" />

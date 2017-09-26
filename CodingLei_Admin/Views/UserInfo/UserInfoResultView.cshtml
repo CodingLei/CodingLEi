@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "UserInfoResultView";
+}
+
+@using CodingLei.Admin.Models
+@using CodingLei_Model.TableModel;
+@using CodingLei_Common.Helper
+@model IList<UserInfoModel>
+
+<style>
+    table, tr, th {
+        text-align: center;
+    }
+</style>
+
+<table class="table table-hover">
+    <colgroup>
+        <col width="15%" />
+        <col width="15%" />
+        <col width="15%" />
+        <col width="15%"/>
+        <col width="15%" />
+        <col width="25%" />
+    </colgroup>
+    <thead>
+        <tr>
+            <th>
+                会员ID
+            </th>
+            <th>
+                会员姓名
+            </th>
+            <th>
+                会员年龄
+            </th>
+            <th>
+                手机号
+            </th>
+            <th>
+                有效性
+            </th>
+            <th>
+                操作
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.UserId
+                    </td>
+                    <td>
+                        @item.UserName
+                    </td>
+                    <td>
+                        @item.UserAge
+                    </td>
+                    <td>
+                        @item.Tell
+                    </td>
+                    <td>
+                        @item.Enabled
+                    </td>
+                    <td>
+                        <a href="###">编辑</a>
+                        <a href="###">删除</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr class="danger">
+                <td colspan="6">
+                    没有任何数据
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+@Html.Pager(ConvertHelper.ConvertToInt(ViewData["TotalCount"]))
+

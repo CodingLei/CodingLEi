@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <User UserId="6761">
+    <UserName>王二麻</UserName>
+    <UserAge>21</UserAge>
+    <Tell>15995851784</Tell>
+    <Enabled>True</Enabled>
+  </User>
+  <User UserId="6762">
+    <UserName>李四</UserName>
+    <UserAge>21</UserAge>
+    <Tell>15995851784</Tell>
+    <Enabled>False</Enabled>
+  </User>
+</Users>

@@ -153,6 +153,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Account\AccountController.cs" />
+    <Compile Include="Controllers\Account\UserInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WorkStation\InterfaceTypeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1217,7 +1218,6 @@
     <Content Include="dist\summernote.css" />
     <Content Include="dist\summernote.js" />
     <Content Include="dist\summernote.min.js" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="ApplicationInsights.config">
@@ -1233,6 +1233,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Images\favicon.ico" />
+    <Content Include="Models\data5.xml" />
     <Content Include="plugins\ckeditor\CHANGES.md" />
     <Content Include="plugins\ckeditor\LICENSE.md" />
     <Content Include="plugins\ckeditor\plugins\scayt\CHANGELOG.md" />
@@ -2608,6 +2609,9 @@
     <Content Include="Views\InterfaceType\InterfaceTypeIndex.cshtml" />
     <Content Include="Views\InterfaceType\InterfaceTypeResultView.cshtml" />
     <Content Include="Views\InterfaceType\InterfaceTypeAdd.cshtml" />
+    <Content Include="Views\UserInfo\UserInfoIndex.cshtml" />
+    <Content Include="Views\UserInfo\UserInfoAddView.cshtml" />
+    <Content Include="Views\UserInfo\UserInfoResultView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2617,7 +2621,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodingLei_Business\CodingLei_Business.csproj">

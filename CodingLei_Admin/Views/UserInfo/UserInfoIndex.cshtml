@@ -1,10 +1,12 @@
-﻿@using CodingLei.Admin.Models
+﻿
+
+@using CodingLei.Admin.Models
 @using CodingLei_Model.SearchModel;
 @model DemoSearchModel
 @{
-    ViewBag.Title = "InterfaceTypeIndex";
+    ViewBag.Title = "UserInfoIndex";
 }
-@using (Ajax.BeginForm("GetInterfaceTypeList", new AjaxOptions { UpdateTargetId = "rsResult", OnBegin = "", OnComplete = "" }))
+@using (Ajax.BeginForm("GetUserInfoList", new AjaxOptions { UpdateTargetId = "rsResult", OnBegin = "", OnComplete = "" }))
 {
     <table>
         <tbody>
@@ -19,11 +21,11 @@
 
                 @Html.HiddenFor(m => m.PageIndex)
                 <td>
-                    @Html.SubmitButton("查询", new {id = "btnSearch", style = "margin:0px 0px 0px 20px;"})
+                    @Html.SubmitButton("查询", new { id = "btnSearch", style = "margin:0px 0px 0px 20px;" })
                 </td>
 
                 <td>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style = "margin:0px 0px 0px 20px;">添加接口</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin:0px 0px 0px 20px;">添加接口</button>
                     @*<button type="button" class="btn btn-primary"  onclick="UpdateBrand(0)" data-toggle="modal" data-target="#myModal" >编辑接口</button>*@
                 </td>
 
@@ -32,10 +34,10 @@
         </tbody>
     </table>
     <div id="rsResult" style="margin:20px 0px 0px 0px;">
-        @Html.Partial("InterfaceTypeResultView")
+        @Html.Partial("UserInfoResultView")
     </div>
 }
-@Html.Partial("InterfaceTypeAdd")
+@Html.Partial("UserInfoAddView")
 
 
 
@@ -48,5 +50,8 @@
     function UpdateBrand() {
         $("#myModalLabel").text("编辑");
     }
+
+    
 </script>
+
 
